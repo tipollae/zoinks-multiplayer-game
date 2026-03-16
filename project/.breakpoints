@@ -1,0 +1,26 @@
+{
+  "files": {
+    "public/script.js": [
+      {
+        "id": "1690e3d3-b1a8-4599-bd8a-c34ff7abb680",
+        "line": 1,
+        "version": 1,
+        "index": 0
+      },
+      {
+        "id": "eb0fdc50-2ba5-4740-8d29-ea0ad52f68ab",
+        "line": 1,
+        "version": 1,
+        "index": 0
+      }
+    ],
+    "public/serverContact/talkWithServer.js": [
+      {
+        "id": "111598c7-f82a-466f-a8b3-e377bd91f728",
+        "line": 56,
+        "version": 1,
+        "index": 981
+      }
+    ]
+  }
+}

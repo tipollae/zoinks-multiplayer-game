@@ -1,0 +1,13 @@
+body{
+  overflow: hidden;
+
+  background-color: black;
+}
+
+canvas{
+
+  position: absolute;
+  top: 0%;
+  cursor: none;
+
+}

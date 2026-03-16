@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Zoinks Cheats</title>
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=lOD8H7c5MNJ6qsaoQIUy90MhLFH4OH2ESBEpYmQUH7LbvY0JjxtnUMuROPZ73UjHsk0yDf6OQ-YSrcfUD9CLxsHuKSLd7kKZmhg_DF_dEt07jPcQtQjYz44rQ_rx2a2oxY6CgZxvlhloTDKhwEqAoCTa-uB3dC5Liqwx5Vn7NBQmJyrsT8NEfYKRVCwRWC_jLcjxw64VWs9QBB3O_HTGvFzr_azFmTNqUiDxpXskPXf8rFi845KAHWglg7fY0kmpDtQZ_eh7zXSzi--YO-9zEw" charset="UTF-8"></script><style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        #cheats-container {
+            background-color: #444;
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .cheat-section {
+            margin-bottom: 20px;
+        }
+
+        .copy-button {
+            background-color: #555;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .cheat-code {
+            background-color: #666;
+            color: #fff;
+            border: none;
+            padding: 5px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        #notification {
+            position: fixed;
+            top: 20px;
+            background-color: #555;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            display: none;
+            border-radius: 8px;
+            width: 200px;
+            animation: slideFadeIn 0.5s ease-in-out, fadeOut 1s ease-in-out 2s forwards;
+        }
+
+        @keyframes slideFadeIn {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="notification"></div>
+    
+    <div id="cheats-container">
+        <div class="cheat-section">
+            <h2>Jump Height Cheat</h2>
+            <p>Controls jump height</p>
+            <button class="copy-button" onclick="copyToClipboard('self.player.speedY = ' + document.getElementById('jumpHeight').innerText);">Copy</button>
+            <span contenteditable="true" id="jumpHeight" class="cheat-code">1500</span>
+        </div>
+
+        <div class="cheat-section">
+            <h2>Reload Time Cheat</h2>
+            <p>Controls reload time</p>
+            <button class="copy-button" onclick="copyToClipboard('self.player.reloadTime = ' + document.getElementById('reloadTime').innerText);">Copy</button>
+            <span contenteditable="true" id="reloadTime" class="cheat-code">1</span>
+        </div>
+
+        <div class="cheat-section">
+            <h2>Speed on X-Axis Cheat</h2>
+            <p>Controls speed on the X-axis</p>
+            <button class="copy-button" onclick="copyToClipboard('self.player.speedX = ' + document.getElementById('speedX').innerText);">Copy</button>
+            <span contenteditable="true" id="speedX" class="cheat-code">1500</span>
+        </div>
+
+        <div class="cheat-section">
+            <h2>Amount of Bullets Cheat</h2>
+            <p>Controls the amount of bullets before reload</p>
+            <button class="copy-button" onclick="copyToClipboard('self.player.shotsLeft = ' + document.getElementById('shotsLeft').innerText);">Copy</button>
+            <span contenteditable="true" id="shotsLeft" class="cheat-code">100</span>
+        </div>
+
+        <div class="cheat-section">
+            <h2>Fly Hacks Cheat</h2>
+            <p>Disables gravity for the player</p>
+            <button class="copy-button" onclick="copyToClipboard('self.player.body.setGravityY(0)');">Copy</button>
+        </div>
+    </div>
+
+    <script>
+        function copyToClipboard(text) {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+
+            showNotification();
+        }
+
+        function showNotification() {
+            const notification = document.getElementById('notification');
+            notification.innerText = 'Copied ✅';
+            notification.style.display = 'block';
+
+            setTimeout(() => {
+                notification.style.display = 'none';
+            }, 3000); // Hide after 3 seconds (including fade-out animation duration)
+        }
+    </script>
+</body>
+</html>
