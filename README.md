@@ -1,4 +1,4 @@
-<img width="615" height="97" alt="Screenshot 2026-11-21 102646" src="https://github.com/user-attachments/assets/59cf643f-68ae-4182-a1be-e21ac187eaf2" /># zoinks-multiplayer-game
+# zoinks-multiplayer-game
 A multiplayer game made with Phaser 3, Socket.io and Node.js. This project was just for fun so there are many bugs.
 
 go to the project directory in vs code terminal and just run: node index.js
